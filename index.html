@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Exercise</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <section class="container mt-5">
+        <h1>Bài tập Array JS</h1>
+        <div class="diagram">
+            <form class="mt-2">
+                <div class="form-row">
+                    <div class="form-group col-4">
+                        <input type="number" class="form-control" id="addNum" placeholder="Nhập số n">
+                    </div>
+                    <div class="col-1"></div>
+                    <button id="btnAddNum" type="button" class="btn btn-primary col-2 mb-3">Thêm số</button>
+                </div>
+                <p id="txtAddNum" class="alert alert-success"></p>
+            </form>
+            <div class="accordion" id="accordionWorkWithArray">
+                <div class="card">
+                    <div class="card-header" id="workOne">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        Tổng số dương
+                      </button>
+                        </h2>
+                    </div>
+
+                    <div id="collapseOne" class="collapse" aria-labelledby="workOne" data-parent="#accordionWorkWithArray">
+                        <div class="card-body">
+                            <form class="mt-2">
+                                <div class="form-row">
+                                    <button id="btnSum" type="button" class="btn btn-primary col-2 mb-3">Tính Tổng</button>
+                                </div>
+                                <p id="txtSum" class="alert alert-success"></p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header" id="workTwo">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Đếm số dương
+                      </button>
+                        </h2>
+                    </div>
+
+                    <div id="collapseTwo" class="collapse" aria-labelledby="workTwo" data-parent="#accordionWorkWithArray">
+                        <div class="card-body">
+                            <form class="mt-2">
+                                <div class="form-row">
+                                    <button id="btnPositiveCount" type="button" class="btn btn-primary col-2 mb-3">Đếm số</button>
+                                </div>
+                                <p id="txtPositiveCount" class="alert alert-success"></p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header" id="workThree">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Tìm số nhỏ nhất
+                      </button>
+                        </h2>
+                    </div>
+
+                    <div id="collapseThree" class="collapse" aria-labelledby="workThree" data-parent="#accordionWorkWithArray">
+                        <div class="card-body">
+                            <form class="mt-2">
+                                <div class="form-row">
+                                    <button id="btnFindMin" type="button" class="btn btn-primary col-4 mb-3">Tìm số nhỏ nhất</button>
+                                </div>
+                                <p id="txtFindMin" class="alert alert-success"></p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header" id="workFour">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        Tìm số dương nhỏ nhất
+                      </button>
+                        </h2>
+                    </div>
+
+                    <div id="collapseFour" class="collapse" aria-labelledby="workFour" data-parent="#accordionWorkWithArray">
+                        <div class="card-body">
+                            <form class="mt-2">
+                                <div class="form-row">
+                                    <button id="btnFindPositiveMin" type="button" class="btn btn-primary col-4 mb-3">Tìm số dương nhỏ nhất</button>
+                                </div>
+                                <p id="txtFindPositiveMin" class="alert alert-success"></p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header" id="workFive">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                        Tìm số chẵn cuối cùng
+                      </button>
+                        </h2>
+                    </div>
+
+                    <div id="collapseFive" class="collapse" aria-labelledby="workFive" data-parent="#accordionWorkWithArray">
+                        <div class="card-body">
+                            <form class="mt-2">
+                                <div class="form-row">
+                                    <button id="btnFindLastEven" type="button" class="btn btn-primary col-4 mb-3">Tìm số chẵn cuối cùng</button>
+                                </div>
+                                <p id="txtFindLastEven" class="alert alert-success"></p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header" id="workSix">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                        Đổi chỗ
+                      </button>
+                        </h2>
+                    </div>
+
+                    <div id="collapseSix" class="collapse" aria-labelledby="workSix" data-parent="#accordionWorkWithArray">
+                        <div class="card-body">
+                            <form class="mt-2">
+                                <div class="form-row">
+                                    <div class="form-group col-4">
+                                        <input type="number" class="form-control" id="index1" placeholder="Nhập vị trí 1">
+                                    </div>
+                                    <div class="form-group col-4">
+                                        <input type="number" class="form-control" id="index2" placeholder="Nhập vị trí 2">
+                                    </div>
+                                    <div class="col-1"></div>
+                                    <button id="btnChangeIndex" type="button" class="btn btn-primary col-2 mb-3">Đổi chỗ</button>
+                                </div>
+                                <p id="txtChangeIndex" class="alert alert-success"></p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header" id="workSeven">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                        Sắp xếp tăng dần
+                      </button>
+                        </h2>
+                    </div>
+
+                    <div id="collapseSeven" class="collapse" aria-labelledby="workSeven" data-parent="#accordionWorkWithArray">
+                        <div class="card-body">
+                            <form class="mt-2">
+                                <div class="form-row">
+                                    <button id="btnSortUp" type="button" class="btn btn-primary col-2 mb-3">Sắp xếp</button>
+                                </div>
+                                <p id="txtSortUp" class="alert alert-success"></p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header" id="workEight">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                        Tìm số nguyên tố đầu tiên
+                      </button>
+                        </h2>
+                    </div>
+
+                    <div id="collapseEight" class="collapse" aria-labelledby="workEight" data-parent="#accordionWorkWithArray">
+                        <div class="card-body">
+                            <form class="mt-2">
+                                <div class="form-row">
+                                    <button id="btnFirstPrimeNumber" type="button" class="btn btn-primary col-4 mb-3">Tìm số nguyên tố</button>
+                                </div>
+                                <p id="txtFirstPrimeNumber" class="alert alert-success"></p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header" id="workNine">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                        Thêm mảng và đếm số thực
+                      </button>
+                        </h2>
+                    </div>
+
+                    <div id="collapseNine" class="collapse" aria-labelledby="workNine" data-parent="#accordionWorkWithArray">
+                        <div class="card-body">
+                            <form class="mt-2">
+
+                                <div class="form-row">
+                                    <div class="form-group col-4">
+                                        <input type="number" class="form-control" id="addNewNum" placeholder="Nhập số">
+                                    </div>
+                                    <div class="col-1"></div>
+                                    <button id="btnAddNewNum" type="button" class="btn btn-primary col-2 mb-3">Thêm số</button>
+                                </div>
+                                <p id="txtAddNewNum" class="alert alert-success"></p>
+
+                                <div class="form-row">
+                                    <button id="btnCountInt" type="button" class="btn btn-primary col-4 mb-3">Đếm số nguyên</button>
+                                </div>
+                                <p id="txtCountInt" class="alert alert-success"></p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header" id="workTen">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+                            So sánh số lượng số âm và dương
+                      </button>
+                        </h2>
+                    </div>
+
+                    <div id="collapseTen" class="collapse" aria-labelledby="workTen" data-parent="#accordionWorkWithArray">
+                        <div class="card-body">
+                            <form class="mt-2">
+                                <div class="form-row">
+                                    <button id="btnCompare" type="button" class="btn btn-primary col-4 mb-3">So sánh</button>
+                                </div>
+                                <p id="txtCompare" class="alert alert-success"></p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
